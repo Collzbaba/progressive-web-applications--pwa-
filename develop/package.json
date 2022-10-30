@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start:dev": "concurrently\"cd server && npm run server\"\"cd client && npm run dev\"",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
     "start": "npm run buld && cd server && node sever.js",
     "server": "cd sever nodemon sever.js --ignore clients",
     "build": "cd client && npm run build",
