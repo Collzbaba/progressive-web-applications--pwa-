@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "start:dev": "concurrently\"cd server && npm run server\"\"cd client && npm run dev\"",
+    "start": "npm run buld && cd server && node sever.js",
+    "server": "cd sever nodemon sever.js --ignore clients",
+    "build": "cd client && npm run build",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "Blessed Adodo",
