@@ -27,13 +27,48 @@ module.exports = () => {
         swSrc: "./src-sw.js",
         swDest: "./src-sw.js",
       }),
-      
-    ],
+      new WebpackPwaManifest({
+       //  Created a manifest.json:
+       fingerprints: false,
+       inject: true,
+       name: "My Progressive Web App",
+       short_name: "MyPWA",
+       description: "My awesome Progressive Web App!",
+       background_color: "#ffffff",
+       crossorigin: "use-credentials", 
+       start_url: "/",
+       publicPath: "./",
+       icons: [
+         {
+           src: path.resolve("src/images/logo.png"),
+           sizes: [96, 128, 192, 256, 384, 512], 
+           destination: path.join("assets/", "icons"),
+         },
+       ],
+     }),
+   ],
 
-    module: {
-      rules: [
-        
-      ],
-    },
-  };
+   module: {
+     rules: [
+       {
+         test: /\.css$/i,
+         use: ["style-loader", "css-loader"],
+       },
+       {
+         test: /\.m?js$/,
+         exclude: /node_modules/,
+         use: {
+           loader: "babel-loader",
+           options: {
+             presets: ["@babel/preset-env"],
+             plugins: [
+               "@babel/plugin-proposal-object-rest-spread",
+               "@babel/transform-runtime",
+             ],
+           },
+         },
+       },
+     ],
+   },
+ };
 };
