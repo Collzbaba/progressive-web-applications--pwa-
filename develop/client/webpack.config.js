@@ -20,7 +20,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
-        title: "TODOs List",
+        title: "text editor",
       }),
       // Injecting custom service worker
       new InjectManifest({
@@ -37,7 +37,7 @@ module.exports = () => {
        background_color: "#ffffff",
        crossorigin: "use-credentials", 
        start_url: "/",
-       publicPath: "./",
+       publicPath: "/",
        icons: [
          {
            src: path.resolve("src/images/logo.png"),
