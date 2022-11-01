@@ -22,7 +22,7 @@ To use this app, simply open it up in the browser (with the deployed heroku app 
 ***
 
 ## Test ScreenShot
-![screenshot](./develop/client/dist/assets/test-screen-shot%20.png)
+![screenshot](./client/dist/assets/test-screen-shot%20.png)
 
 
 ## Questions
