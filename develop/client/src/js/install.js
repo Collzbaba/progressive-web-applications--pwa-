@@ -1,8 +1,9 @@
 const installBtn = document.getElementById("buttonInstall");
 const textHeader = document.getElementById("textHeader");
+const buttonInstall = document.getElementById("buttonInstall");
 
 // Logic for installing the PWA
-// TODO: Add an event handler to the `beforeinstallprompt` event
+//  Add an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
   event.preventDefault();
   installBtn.style.visibility = "visible";
@@ -20,5 +21,5 @@ window.addEventListener('beforeinstallprompt', (event) => {
 // Add an handler for the `appinstalled` event
 window.addEventListener('appinstalled', (event) => {
   textHeader.textContent = "Successfully installed!";
-  console.log("", "appinstalled", event);
+  console.log("👍", "appinstalled", event);
 });

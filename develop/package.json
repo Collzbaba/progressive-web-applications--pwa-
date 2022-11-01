@@ -1,17 +1,23 @@
 {
-  "name": "jate",
+  "name": "JATE",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
+  "engines": {
+    "node": "16.17.0"
+  },
   "scripts": {
     "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
-    "start": "npm run buld && cd server && node sever.js",
-    "server": "cd sever nodemon sever.js --ignore clients",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server nodemon server.js -- ignore client",
     "build": "cd client && npm run build",
     "install": "cd server && npm i && cd ../client && npm i",
-    "client": "cd client && npm start"
+    "client": "cd client && npm start",
+    "heroku-prebuild": "npm install --dev",
+    "postinstall": "npm run build"
   },
   "keywords": [],
-  "author": "Blessed Adodo",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
@@ -20,6 +26,5 @@
   "devDependencies": {
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4"
-  },
-  "description": ""
+  }
 }
