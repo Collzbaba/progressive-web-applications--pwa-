@@ -5,7 +5,7 @@ const buttonInstall = document.getElementById("buttonInstall");
 // Logic for installing the PWA
 //  Add an event handler to the `beforeinstallprompt` event
 window.addEventListener('beforeinstallprompt', (event) => {
-  event.preventDefault();
+  // event.preventDefault();
   installBtn.style.visibility = "visible";
   textHeader.textContent = "Click the button to install!";
   

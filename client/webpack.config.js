@@ -30,14 +30,14 @@ module.exports = () => {
       }),
 
       new WebpackPwaManifest({
-        // Create a manifest.json:
+        // TODO: Create a manifest.json:
         fingerprints: false,
         inject: true,
         name: "My Progressive Web App",
         short_name: "MyPWA",
         description: "My awesome Progressive Web App!",
         background_color: "#ffffff",
-        crossorigin: "use-credentials",
+        crossorigin: "use-credentials", 
         start_url: "/",
         publicPath: "./",
         icons: [
