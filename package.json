@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "homepage": "https://collzbaba.github.io/progressive-web-applications--pwa-",
   "engines": {
     "node": "16.17.0"
   },
